@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic);
+html,
+body {
+  font-family: "Open Sans";
+}
+/* Time left */
+.time-left {
+  background-color: rgba(0, 167, 180, 0.8);
+}
+/* Toolbar */
+.toolbar,
+.stream-toolbar .item {
+  background-color: rgba(0, 167, 180, 0.8);
+}
+.toolbar {
+  border-radius: 40px;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  left: 50%;
+  top: 90%;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  padding: 10px 20px;
+  box-shadow: 0 0 5px #888;
+}
+.toolbar .item {
+  padding: 14px 20px 10px 20px;
+}
+.stream-toolbar .item.strikethrough .icon:after {
+  background-color: red;
+}
+.add-appointment {
+  display: none;
+}
+/* Chat UI Component */
+.chat-ui {
+  font-family: "Open Sans";
+}
+.chat-ui .item.yourself {
+  background-color: #00a7b4;
+}
+.chat-ui .text {
+  padding-right: 80px;
+}
+.chat-ui .text::-webkit-input-placeholder {
+  color: #FFF;
+}
+.chat-ui .text::-moz-placeholder {
+  color: #FFF;
+}
+.chat-ui .text:-ms-input-placeholder {
+  color: #FFF;
+}
+.chat-ui .text:-moz-placeholder {
+  color: #FFF;
+}
+.chat-ui .send {
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #00a7b4;
+  font-size: .7rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.chat-ui .send .icon {
+  font-family: "Open Sans";
+}
+.chat-ui .send .icon:before {
+  content: 'Send';
+}
+.chat-ui .send:hover {
+  color: #FFF;
+}
+/* Stream layouts */
+.stream {
+  border-radius: 8px;
+  border-width: 4px;
+}
+/* Stream name */
+.stream-name {
+  background-color: rgba(0, 167, 180, 0.8);
+  left: 0;
+  bottom: 0;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.stream:hover .stream-name,
+.stream[data-video-disabled=true] .stream-name {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+/* Waiting page */
+.waiting .title {
+  font-size: 0;
+}
+.waiting .title:before {
+  content: 'Welcome';
+  font-size: 3.5rem;
+}
+.waiting .description {
+  font-size: 0;
+}
+.waiting .description:before {
+  content: 'other party will be here shortly...';
+  font-size: 2.5rem;
+}
+.waiting .logo {
+  display: none;
+}
+.next-guest-join {
+  right: 16px;
+  top: 14px;
+}
+@media only screen and (max-width: 767px) {
+  .toolbar {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    top: calc(100% - 5px);
+    height: 50px;
+    padding: 4px 10px;
+    width: auto;
+  }
+  .toolbar .item {
+    padding: 10px 10px 10px 10px;
+  }
+  [data-current-layout-type=float] .streams .stream[data-stream-type=publisher] {
+    bottom: 85px;
+    right: 25px;
+  }
+}
