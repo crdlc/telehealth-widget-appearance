@@ -29,6 +29,10 @@ body {
 .toolbar .item {
   padding: 14px 20px 10px 20px;
 }
+.toolbar .record,
+.toolbar .recordings {
+  display: none;
+}
 .stream-toolbar .item.strikethrough .icon:after {
   background-color: red;
 }
